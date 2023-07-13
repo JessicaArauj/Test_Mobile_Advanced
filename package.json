@@ -1,14 +1,14 @@
 {
-  "name": "testes-mobile-ebac-shop",
+  "name": "test mobile android",
   "version": "1.0.0",
-  "description": "",
+  "description": "Project test app android used framework WebdriverIO",
   "main": "index.js",
   "scripts": {
     "test": "wdio run wdio.conf.js",
     "log": "adb logcat | grep wdio"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jessica Teixeira Araujo",
   "license": "ISC",
   "dependencies": {
     "@wdio/allure-reporter": "^8.3.0",
@@ -22,5 +22,8 @@
     "@wdio/mocha-framework": "^8.3.0",
     "@wdio/spec-reporter": "^8.3.0",
     "appium": "^1.22.3"
+  },
+  "directories": {
+    "test": "test"
   }
 }

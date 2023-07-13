@@ -2,19 +2,33 @@ pipeline {
     agent any
 
     stages {
-        stage('Clonar o repositorio') {
+        stage('Clonar o repositório') {
             steps {
-                git url:'https://github.com/pedrobrafel/modulo-17-ebac-qa', branch: 'main' 
+                git branch: 'main', url: 'https://github.com/JessicaTeixeiraAraujo/Test_Mobile_Advanced.git'
             }
         }
+    }
+    
+    stages {
         stage('Instalar dependências') {
             steps {
-                bat 'npm install'
+                sh 'npm install'
             }
         }
-        stage('Executar testes') {
+    }
+    
+    stages {
+        stage('Iniciar o servidor') {
             steps {
-                 bat 'npm run test'
+                sh 'npm start'
+            }
+        }
+    }
+    
+    stages {
+        stage('Execução dos testes') {
+            steps {
+                sh 'NO_COLOR=1 npm run cy:run'
             }
         }
     }

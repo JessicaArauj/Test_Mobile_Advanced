@@ -18,7 +18,7 @@ exports.config = {
     capabilities: [{
         // "platformName": "Android",
         // "appium:platformVersion": "8.0",
-        // "appium:deviceName": "Pixel 2 API 26",
+        // "appium:deviceName": "ebac-qa",
         // "appium:automationName": "UiAutomator2",
         // "appium:app": join(process.cwd(), './app/android/loja-ebac.apk'),
         // "appium:appWaitActivity": 'com.woocommerce.android.ui.login.LoginActivity',

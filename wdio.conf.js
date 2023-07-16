@@ -16,8 +16,8 @@ exports.config = {
     ],
     framework: 'mocha',
     capabilities: [{
-        // "platformName": "Android",
-        // "appium:platformVersion": "8.0",
+         "platformName": "Android",
+        // "appium:platformVersion": "9.0",
         // "appium:deviceName": "ebac-qa",
         // "appium:automationName": "UiAutomator2",
         // "appium:app": join(process.cwd(), './app/android/loja-ebac.apk'),

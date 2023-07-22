@@ -1,21 +1,21 @@
-class menuLogin {
-    get #urlLoja() { return $('android.widget.EditText') }
+class LoginScreen {
+    get #storeAddress() { return $('android.widget.EditText') }
     get #continue() { return $('id:bottom_button') }
-    get #continueComCredenciais () { return $('id:login_site_creds') }
+    get #continueCredentials () { return $('id:login_site_creds') }
     get #username() { return $('android=new UiSelector().text("Username")') }
     get #password() { return $('android=new UiSelector().text("Password")') }
     get #senha2fa() { return $('id:login_enter_password') }
 
-    async insereUrlLoja(url) {
-        this.#urlLoja.setValue(url)
+    async insertUrlStore(url) {
+        this.#storeAddress.setValue(url)
     }
 
     async continue() {
         await this.#continue.click()
     }
 
-    async continueComCredenciais() {
-        await this.#continueComCredenciais.click()
+    async continueCredentials() {
+        await this.#continueCredentials.click()
     }
 
     async login(username, password) {
@@ -34,4 +34,4 @@ class menuLogin {
     }
 }
 
-module.exports = new menuLogin()
+module.exports = new LoginScreen()

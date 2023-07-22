@@ -1,11 +1,11 @@
-class menuHome {
-    get #urlLoja(){
+class homeScreen {
+    get #urlStore(){
         return $('id:button_login_store')
     }
 
-    async acessaLogin(){
-        await this.#urlLoja.click()
+    async accessLogin(){
+        await this.#urlStore.click()
     }
 }
 
-module.exports = new menuHome()
+module.exports = new homeScreen()

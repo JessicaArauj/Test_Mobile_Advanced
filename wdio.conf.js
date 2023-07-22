@@ -16,7 +16,7 @@ exports.config = {
     ],
     framework: 'mocha',
     capabilities: [{
-         "platformName": "Android",
+        // "platformName": "Android",
         // "appium:platformVersion": "9.0",
         // "appium:deviceName": "ebac-qa",
         // "appium:automationName": "UiAutomator2",
@@ -25,7 +25,7 @@ exports.config = {
         // "appium:newCommandTimeout": 999
 
         'app': 'bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c',
-        'device': 'Samsung Galaxy S10',// Specify device and os_version for testing
+        'device': 'Samsung Galaxy S10', // Specify device and os_version for testing
         'os_version': '9.0',        // Set other BrowserStack capabilities
         'project': 'Meu primeiro projeto em device farm',
         'build': 'build-1',

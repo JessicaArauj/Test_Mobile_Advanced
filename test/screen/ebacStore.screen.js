@@ -1,21 +1,21 @@
-class menuLoja {
-    get #logoLoja() { return $('~My store') }
+class menuStore {
+    get #logoStore() { return $('~My store') }
 
-    get #nomeLoja() { return $('id:toolbar_subtitle') }
+    get #nameStore() { return $('id:toolbar_subtitle') }
 
-    async validaNomeLoja() {
-        await this.#nomeLoja.waitForExist({ timeout: 50000 })
-        return await this.#nomeLoja.getText()
+    async checkNameStore() {
+        await this.#nameStore.waitForExist({ timeout: 50000 })
+        return await this.#nameStore.getText()
     }
 
-    async logoLojaVisivel() {
-        await this.#logoLoja.waitForExist({ timeout: 50000 })
-        return await this.#logoLoja.isDisplayed()
+    async logoStoreVisible() {
+        await this.#logoStore.waitForExist({ timeout: 50000 })
+        return await this.#logoStore.isDisplayed()
     }
 
-    get #produtosLoja() { return $('id:products') }
+    get #storeProducts() { return $('id:products') }
 
-    async acessaProdutos() { await this.#produtosLoja.click() }
+    async accessproducts() { await this.#storeProducts.click() }
 }
 
-module.exports = new menuLoja()
+module.exports = new menuStore()

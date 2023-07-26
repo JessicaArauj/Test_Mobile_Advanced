@@ -3,36 +3,36 @@ const allure = require('allure-commandline')
 const video = require('wdio-video-reporter')
 
 exports.config = {
-    // baseUrl: 'http://localhost',
-    // port: 4723,
-    // path: '/wd/hub',
+    baseUrl: 'http://localhost',
+    port: 4723,
+    path: '/wd/hub',
     // services: ['appium'],
-    user: 'pedroflix_p5KMJE',
-    key: 'TTqqup4pVhX4pkZ5FiVy',
-    services: ['browserstack'],
-    waitForTimeout: 99999,
+    // user: '',
+    // key: '',
+    // services: ['browserstack'],
+    waitForTimeout: 20000,
     specs: [
         './test/specs/**/*.spec.js'
     ],
     framework: 'mocha',
     capabilities: [{
-        // "platformName": "Android",
-        // "appium:platformVersion": "9.0",
-        // "appium:deviceName": "ebac-qa",
-        // "appium:automationName": "UiAutomator2",
-        // "appium:app": join(process.cwd(), './app/android/loja-ebac.apk'),
-        // "appium:appWaitActivity": 'com.woocommerce.android.ui.login.LoginActivity',
-        // "appium:newCommandTimeout": 999
+        "platformName": "Android",
+        "appium:platformVersion": "9.0",
+        "appium:deviceName": "ebac-qa",
+        "appium:automationName": "UiAutomator2",
+        "appium:app": join(process.cwd(), './app/android/loja-ebac.apk'),
+        "appium:appWaitActivity": 'com.woocommerce.android.ui.login.LoginActivity',
+        "appium:newCommandTimeout": 240
 
-        'app': 'bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c',
-        'device': 'Samsung Galaxy S10', // Specify device and os_version for testing
-        'os_version': '9.0',        // Set other BrowserStack capabilities
-        'project': 'Meu primeiro projeto em device farm',
-        'build': 'build-1',
-        'name': 'teste_login'
+        // 'app': 'bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c',
+        // 'device': 'Samsung Galaxy S10', // Specify device and os_version for testing
+        // 'os_version': '9.0',        // Set other BrowserStack capabilities
+        // 'project': 'Meu primeiro projeto em device farm',
+        // 'build': 'build-1',
+        // 'name': 'teste_login'
     }],
     mochaOpts: {
-        timeout: 999999
+        timeout: 300000
     },
     reporters: ['spec',
         ['allure', {
